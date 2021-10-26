@@ -13,13 +13,16 @@
     <a th:href="@{/products}">Products List</a>
     <table border="1">
         <tr>
-            <th>Name</th>
+            <th>Brand & Model</th>
+            <th>Color</th>
             <th>Price</th>
         </tr>
         <tr>
-            <td th:utext="${showProduct.model}">...</td>
+            <td th:utext="${showProduct.brand} + ' ' +${showProduct.model}">...</td>
+            <td th:utext="${showProduct.color}">...</td>
             <td th:utext="${showProduct.price}">...</td>
         </tr>
+        <img th:src="${showProduct.image}">
     </table>
 </div>
 </body>

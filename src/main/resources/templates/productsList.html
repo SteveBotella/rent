@@ -16,7 +16,7 @@
             <th>Price</th>
         </tr>
         <tr th:each ="product : ${listproducts}">
-            <td ><a th:utext="${product.model}" th:href="@{/products/{id}(id = ${product.id})}"></a></td>
+            <td ><a th:utext="${product.brand} + ' ' + ${product.model}" th:href="@{/products/{id}(id = ${product.id})}"></a></td>
             <td th:utext="${product.price}">...</td>
         </tr>
     </table>
