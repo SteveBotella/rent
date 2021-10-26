@@ -1,22 +1,12 @@
-package com.rent.rent.model;
+package com.rent.rent.form;
 
-public class Product {
-
+public class ProductForm {
     private int id;
     private String modele;
     private String brand;
     private String color;
     private int price;
     private String image;
-
-    public Product(int id, String modele, String brand, String color, int price, String image) {
-        this.id = id;
-        this.modele = modele;
-        this.brand = brand;
-        this.color = color;
-        this.price = price;
-        this.image = image;
-    }
 
     public int getId() {
         return id;
@@ -30,8 +20,8 @@ public class Product {
         return modele;
     }
 
-    public void setModele(String model) {
-        this.modele = model;
+    public void setModele(String modele) {
+        this.modele = modele;
     }
 
     public String getBrand() {
@@ -64,16 +54,5 @@ public class Product {
 
     public void setImage(String image) {
         this.image = image;
-    }
-
-    @Override
-    public String toString() {
-        return "Product{" +
-                "id=" + id +
-                ", modele='" + modele + '\'' +
-                ", brand='" + brand + '\'' +
-                ", color='" + color + '\'' +
-                ", price=" + price +
-                '}';
     }
 }

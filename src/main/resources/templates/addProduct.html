@@ -14,13 +14,25 @@
    would be @{/edit.html}
    -->
 
-<form th:action="@{/addProduct}"
+<form th:action="@{/addproduct}"
       th:object="${productForm}" method="POST">
-    Model :
-    <input type="text" th:field="*{model}" />
+    Id :
+    <input type="text" th:field="*{id}" />
     <br/>
     Brand :
+    <input type="text" th:field="*{modele}" />
+    <br/>
+    Model :
     <input type="text" th:field="*{brand}" />
+    <br/>
+    Color :
+    <input type="text" th:field="*{color}" />
+    <br/>
+    Price :
+    <input type="text" th:field="*{price}" />
+    <br/>
+    Image :
+    <input type="text" th:field="*{image}" />
     <br/>
     <input type="submit" value="Create" />
 </form>
