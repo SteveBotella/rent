@@ -33,6 +33,16 @@ public class ProductDaoImpl implements ProductDao {
     }
 
     @Override
+    public Product delete(Product product) {
+        for (int i = 0; i < products.size(); i++) {
+            if (products.get(i).getId() == product.getId()) {
+                return products.remove(i);
+            }
+        }
+        return null;
+    }
+
+    @Override
     public Product save(Product product) {
         return null;
     }

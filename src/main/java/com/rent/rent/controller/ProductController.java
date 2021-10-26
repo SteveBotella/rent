@@ -64,4 +64,11 @@ public class ProductController {
         model.addAttribute("errorMessage", errorMessage);
         return "addProduct";
     }
+
+    @GetMapping("/delete/{id}")
+    public String deleteUser(@PathVariable("id") int id, Model model) {
+        Product product = productDao.findById(id);
+        productDao.delete(product);
+        return "productsList";
+    }
 }

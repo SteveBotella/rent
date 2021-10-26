@@ -9,5 +9,7 @@ public interface ProductDao {
 
     public Product findById(int id);
 
+    public Product delete(Product product);
+
     public Product save(Product product);
 }

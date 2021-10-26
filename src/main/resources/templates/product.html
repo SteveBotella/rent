@@ -22,8 +22,9 @@
             <td th:utext="${showProduct.color}">...</td>
             <td th:utext="${showProduct.price}">...</td>
         </tr>
-        <img th:src="${showProduct.image}">
     </table>
+    <img th:src="${showProduct.image}">
+    <button th:object="${showProduct}" th:action="@{/delete/{id}(id = ${showProduct.id})}" th:method="delete">Delete</button>
 </div>
 </body>
 </html>
