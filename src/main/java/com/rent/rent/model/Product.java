@@ -1,17 +1,14 @@
 package com.rent.rent.model;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class Product {
 
     private int id;
-    private String name;
+    private String model;
     private int price;
 
-    public Product(int id, String name, int price) {
+    public Product(int id, String model, int price) {
         this.id = id;
-        this.name = name;
+        this.model = model;
         this.price = price;
     }
 
@@ -19,8 +16,8 @@ public class Product {
         return id;
     }
 
-    public String getName() {
-        return name;
+    public String getModel() {
+        return model;
     }
 
     public int getPrice() {
@@ -31,8 +28,8 @@ public class Product {
         this.id = id;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setModel(String model) {
+        this.model = model;
     }
 
     public void setPrice(int price) {
@@ -43,7 +40,7 @@ public class Product {
     public String toString() {
         return "Product{" +
                 "id=" + id +
-                ", name='" + name + '\'' +
+                ", model='" + model + '\'' +
                 ", price=" + price +
                 '}';
     }
