@@ -22,8 +22,8 @@ public class ProductJsonController {
     }
 
     //Products/{id}
-    @GetMapping(value = "products/{id}") //Call this methode only for a get request
-    public Product displayProduct(@PathVariable int id){
-        return productDao.findById(id);
-    }
+    //@GetMapping(value = "products/{id}") //Call this methode only for a get request
+    //public Product displayProduct(@PathVariable int id){
+    //    return productDao.findById(id);
+    //}
 }

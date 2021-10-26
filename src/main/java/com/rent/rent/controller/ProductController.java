@@ -19,8 +19,14 @@ public class ProductController {
 
     //Products
     @GetMapping(value = "/products")
-    public String productsList(@RequestParam(name="name", required=false, defaultValue="") String name, Model model) {
+    public String productsList(@RequestParam(name = "name", required = false, defaultValue = "") String name, Model model) {
         model.addAttribute("listproducts", productDao.findAll());
         return "productsList";
+    }
+
+    @GetMapping(value = "products/{id}") //Call this methode only for a get request
+    public String product(@RequestParam(name ="name", required = false, defaultValue = "") String name, @PathVariable int id, Model model) {
+        model.addAttribute("showProduct", productDao.findById(id));
+        return "product";
     }
 }

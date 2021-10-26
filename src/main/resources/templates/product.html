@@ -2,25 +2,25 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8" />
-    <title>Products List</title>
+    <title>Product</title>
     <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}"/>
 </head>
 <body>
-<h1>Products List</h1>
+<h1>Product</h1>
 <br/><br/>
 <div>
     <a th:href="@{/}">Home</a>
+    <a th:href="@{/products}">Products List</a>
     <table border="1">
         <tr>
             <th>Name</th>
             <th>Price</th>
         </tr>
-        <tr th:each ="product : ${listproducts}">
-            <td ><a th:utext="${product.name}" th:href="@{/products/{id}(id = ${product.id})}"></a></td>
-            <td th:utext="${product.price}">...</td>
+        <tr>
+            <td th:utext="${showProduct.name}">...</td>
+            <td th:utext="${showProduct.price}">...</td>
         </tr>
     </table>
 </div>
 </body>
 </html>
-
