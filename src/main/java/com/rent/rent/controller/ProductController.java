@@ -57,7 +57,6 @@ public class ProductController {
             Product newProduct = new Product(id, modele, brand, color, price, image);
             ProductDaoImpl.products.add(newProduct);
             model.addAttribute("listproducts", productDao.findAll());
-
             return "productsList";
         }
 
@@ -66,9 +65,10 @@ public class ProductController {
     }
 
     @GetMapping("/delete/{id}")
-    public String deleteUser(@PathVariable("id") int id, Model model) {
+    public String deleteProduct(@PathVariable("id") int id, Model model) {
         Product product = productDao.findById(id);
         productDao.delete(product);
+        model.addAttribute("listproducts", productDao.findAll());
         return "productsList";
     }
 }
