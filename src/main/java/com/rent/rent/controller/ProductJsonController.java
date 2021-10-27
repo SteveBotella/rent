@@ -13,22 +13,22 @@ import java.util.List;
 @RestController //The answer will be Json
 public class ProductJsonController {
 
-    @Autowired //TODO C'est quoi ?
+    @Autowired
     private ProductDao productDao;
 
-    //Products
+    //Show all Products
     @GetMapping(value = "productsJson")
     public List<Product> listproducts(){
         return productDao.findAll();
     }
 
-    //Products/{id}
+    //Show one product
     @GetMapping(value = "productsJson/{id}") //Call this methode only for a get request
     public Product displayProduct(@PathVariable int id){
         return productDao.findById(id);
     }
 
-    //Delete/{id}
+    //Delete one product
     @GetMapping(value = "/deleteJson/{id}")
     public Product delete(@PathVariable int id) {
         Product product = productDao.findById(id);
