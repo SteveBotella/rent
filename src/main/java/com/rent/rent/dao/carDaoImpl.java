@@ -47,4 +47,10 @@ public class carDaoImpl implements carDao {
         cars.add(car.getId(), car);
         return car;
     }
+
+    @Override
+    public Car update(Car car) {
+        cars.add(car.getId(), car);
+        return car;
+    }
 }

@@ -31,6 +31,12 @@ public class CarController {
         return carDao.save(car);
     }
 
+    //Update car
+    @PostMapping(value = {"/addcar"})
+    public Car updateCar(@RequestBody Car car) {
+        return carDao.update(car);
+    }
+
     //Delete one product
     @GetMapping(value = "/deletecar/{id}")
     public Car deleteCar(@PathVariable int id) {

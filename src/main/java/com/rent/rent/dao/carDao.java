@@ -12,4 +12,6 @@ public interface carDao {
     public Car delete(Car car);
 
     public Car save(Car car);
+
+    public Car update(Car car);
 }
