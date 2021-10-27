@@ -1,6 +1,6 @@
 package com.rent.rent.model;
 
-public class Product {
+public class Car {
 
     private int id;
     private String modele;
@@ -9,7 +9,7 @@ public class Product {
     private int price;
     private String image;
 
-    public Product(int id, String modele, String brand, String color, int price, String image) {
+    public Car(int id, String modele, String brand, String color, int price, String image) {
         this.id = id;
         this.modele = modele;
         this.brand = brand;
@@ -68,7 +68,7 @@ public class Product {
 
     @Override
     public String toString() {
-        return "Product{" +
+        return "Car{" +
                 "id=" + id +
                 ", modele='" + modele + '\'' +
                 ", brand='" + brand + '\'' +
