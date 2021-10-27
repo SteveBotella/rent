@@ -9,6 +9,9 @@ public class Car {
     private int price;
     private String image;
 
+    public Car() {
+    }
+
     public Car(int id, String modele, String brand, String color, int price, String image) {
         this.id = id;
         this.modele = modele;

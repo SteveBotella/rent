@@ -33,24 +33,29 @@ public class carDaoImpl implements carDao {
     }
 
     @Override
-    public Car delete(Car car) {
+    public void delete(Car car) {
         for (int i = 0; i < cars.size(); i++) {
             if (cars.get(i).getId() == car.getId()) {
-                return cars.remove(i);
+                cars.remove(i);
             }
         }
-        return null;
     }
 
     @Override
     public Car save(Car car) {
-        cars.add(car.getId(), car);
+        cars.add(car);
         return car;
     }
 
     @Override
     public Car update(Car car) {
-        cars.add(car.getId(), car);
-        return car;
+        for (int i = 0; i < cars.size(); i++) {
+            if (cars.get(i).getId() == car.getId()) {
+                cars.set(i, car);
+                return car;
+            }
+        }
+
+        return null;
     }
 }

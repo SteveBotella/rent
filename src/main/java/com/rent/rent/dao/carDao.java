@@ -9,7 +9,7 @@ public interface carDao {
 
     public Car findById(int id);
 
-    public Car delete(Car car);
+    public void delete(Car car);
 
     public Car save(Car car);
 
