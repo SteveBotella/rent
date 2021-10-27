@@ -24,7 +24,7 @@
         </tr>
     </table>
     <img th:src="${showProduct.image}">
-    <button th:object="${showProduct}" th:action="@{/delete/{id}(id = ${showProduct.id})}" th:method="delete">Delete</button>
+    <a th:href="@{/delete/{id}(id = ${showProduct.id})}">Delete</a>
 </div>
 </body>
 </html>
