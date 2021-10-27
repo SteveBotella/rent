@@ -20,7 +20,7 @@ public class CarController {
     }
 
     //Show one car
-    @GetMapping(value = "cars/{id}") //Call this methode only for a get request
+    @GetMapping(value = "car/{id}") //Call this methode only for a get request
     public Car displayCar(@PathVariable int id){
         return carDao.findById(id);
     }
@@ -32,8 +32,8 @@ public class CarController {
     }
 
     //Delete one product
-    @GetMapping(value = "/delete/{id}")
-    public Car delete(@PathVariable int id) {
+    @GetMapping(value = "/deletecar/{id}")
+    public Car deleteCar(@PathVariable int id) {
         Car car = carDao.findById(id);
         return carDao.delete(car);
     }
