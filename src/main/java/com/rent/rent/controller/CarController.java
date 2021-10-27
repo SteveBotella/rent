@@ -14,31 +14,31 @@ public class CarController {
     private carDao carDao;
 
     //Show all Cars
-    @GetMapping(value = "cars")
+    @GetMapping(value = "/cars")
     public List<Car> listcars(){
         return carDao.findAll();
     }
 
     //Show one car
-    @GetMapping(value = "car/{id}") //Call this methode only for a get request
+    @GetMapping(value = "/car/{id}") //Call this methode only for a get request
     public Car displayCar(@PathVariable int id){
         return carDao.findById(id);
     }
 
     //Add car
-    @PostMapping(value = {"/addcar"})
+    @PostMapping(value = {"/car/add"})
     public Car saveCar(@RequestBody Car car) {
         return carDao.save(car);
     }
 
     //Update car
-    @PostMapping(value = {"/updatecar"})
+    @PostMapping(value = {"/car/update"})
     public Car updateCar(@RequestBody Car car) {
         return carDao.update(car);
     }
 
     //Delete one product
-    @DeleteMapping(value = "/deletecar/{id}")
+    @DeleteMapping(value = "/car/delete/{id}")
     public void deleteCar(@PathVariable int id) {
         Car car = carDao.findById(id);
         carDao.delete(car);
