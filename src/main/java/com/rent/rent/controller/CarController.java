@@ -14,7 +14,7 @@ public class CarController {
     private carDao carDao;
 
     //Show all Cars
-    @GetMapping(value = "/cars")
+    @GetMapping(value = "/car")
     public List<Car> listcars(){
         return carDao.findAll();
     }
@@ -26,7 +26,7 @@ public class CarController {
     }
 
     //Add car
-    @PostMapping(value = {"/car/add"})
+    @PostMapping(value = {"/car/"})
     public Car saveCar(@RequestBody Car car) {
         return carDao.save(car);
     }
@@ -38,7 +38,7 @@ public class CarController {
     }
 
     //Delete one product
-    @DeleteMapping(value = "/car/delete/{id}")
+    @DeleteMapping(value = "/car/{id}")
     public void deleteCar(@PathVariable int id) {
         Car car = carDao.findById(id);
         carDao.delete(car);
