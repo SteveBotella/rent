@@ -1,12 +1,30 @@
 package com.rent.rent.model;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+@Entity
 public class Car {
 
+    @Id
+    @GeneratedValue
     private int id;
+
+    @Column(name = "modele")
     private String modele;
+
+    @Column(name = "brand")
     private String brand;
+
+    @Column(name = "color")
     private String color;
+
+    @Column(name = "price")
     private int price;
+
+    @Column(name = "image")
     private String image;
 
     public Car() {

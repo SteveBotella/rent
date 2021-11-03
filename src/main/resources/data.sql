@@ -1,0 +1,3 @@
+INSERT INTO car(id, modele, brand, color, price, image) VALUES(1, 'Master', 'Renault', 'yellow', 50,'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXMjs4cV87nu22LM9klvK49P60pUZMoYbgt7ezrByc8ad6PtidGbn9GJKvN1cajiJJeDg&usqp=CAU');
+INSERT INTO car(id, modele, brand, color, price, image) VALUES(2, 'Boxer', 'Peugeot', 'gold', 60,'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXMjs4cV87nu22LM9klvK49P60pUZMoYbgt7ezrByc8ad6PtidGbn9GJKvN1cajiJJeDg&usqp=CAU');
+INSERT INTO car(id, modele, brand, color, price, image) VALUES(3, 'Ducato', 'Fiat', 'gold', 40,'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXMjs4cV87nu22LM9klvK49P60pUZMoYbgt7ezrByc8ad6PtidGbn9GJKvN1cajiJJeDg&usqp=CAU');
